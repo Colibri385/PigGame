@@ -61,10 +61,22 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
+        // recupère le score final souhaité
+        var input= document.querySelector('.final-score').value;
+        var winningScore;
+
+        // gère les entrée non définie , 0 , null , " " => false; sinon => true
+
+        if (input) {
+                winningScore = finalScore;
+        } else {
+                winningScore = 100;
+        }
+
 
         // vérifie si le joueur a gagné la partie 
 
-        if (scores[activePlayer] >= 100) {
+        if (scores[activePlayer] >= winningScore) {
 
                 document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
                 document.querySelector('.dice').style.display = 'none';

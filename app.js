@@ -40,13 +40,13 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
                 if (dice !== 1) {
                         // Additionne le score
                         roundScore += dice;
-                        document.querySelector('#current-' + activePlayer).textContent = roundScore;
-                } else {
-                        // joueur suivant
-                        nextPlayer();
-                }
-        }
-
+ xtContent = roundScore;
+ 
+ 
+ 
+ 
+ 
+ 
 });
 
 
@@ -62,13 +62,13 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
         document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
 
         // recupère le score final souhaité
-        var input= document.querySelector('.final-score').value;
+        var input = document.querySelector('.final-score').value;
         var winningScore;
 
         // gère les entrée non définie , 0 , null , " " => false; sinon => true
 
         if (input) {
-                winningScore = finalScore;
+                winningScore = input;
         } else {
                 winningScore = 100;
         }
@@ -90,7 +90,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
 
  }
         
-});
+}); 
 
 
 function nextPlayer() {
